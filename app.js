@@ -40,6 +40,7 @@ class Stepper {
           this.showAlert("Please enter an Email!");
         } else if (this.inputPassword.value.length < 9 && this.currentTab === 1){
           this.showAlert("Password must be 9 characters long");
+          this.currentTab = 0;
         } else {
           this.currentTab = this.currentTab + field ;
         }
