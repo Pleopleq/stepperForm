@@ -36,14 +36,14 @@ class Stepper {
         // Hide the current tab:
         step[this.currentTab].style.display = "none";  
         // Increase or decrease the current tab by 1:
-        if(this.inputEmail.value === ''){
+        if(this.inputEmail.value === '' ){
           this.showAlert("Please enter an Email!");
+        } else if (this.inputPassword.value.length < 9 && this.currentTab === 1){
+          this.showAlert("Password must be 9 characters long");
         } else {
-          console.log(this.currentTab + ' currentTab')
-          console.log(field + ' field ')
           this.currentTab = this.currentTab + field ;
         }
-        
+
         this.showNextInput(this.currentTab)
         // if you have reached the end of the form... :
           if (this.currentTab >= step.length -1) {
